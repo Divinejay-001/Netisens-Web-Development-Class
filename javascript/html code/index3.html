@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: blue;
+        justify-items: center;
+        display: flex;
+    }
+    .container{
+    width: 400px;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%) ;
+}
+
+    .clock{
+        width: 100%;
+    height: 100%;
+    background-color:yellow ;
+    border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+/* backdrop-filter: blur(80px); */
+    }
+    .clock span{
+    font-size: 100px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    /* position: relative; */
+}
+#people{
+    color: white;
+    border: 2px;
+    background-color: blueviolet;
+    font-size:20px ;
+    margin-bottom: 60px;
+   
+}
+</style>
+<body>
+    <div class="hero">
+        
+<div class="container">
+    <p id="people">Time waits for no man, you have to work with it</p>
+<div class="clock">
+    <span id="hrs">00</span>
+    <span >:</span>
+    <span id="mins">00</span>
+    <span>:</span>
+    <span id="secs">00</span>
+</div>
+</div>
+    </div>
+    <script>
+        let hrs= document.getElementById("hrs")
+let mins= document.getElementById("mins")
+let secs= document.getElementById("secs")
+
+setInterval(()=>{
+let currentTime =new Date();
+// hrs.innerHTML=(currentTime.getHours() <10?"0":"") +currentTime.getHours();
+mins.innerHTML=(currentTime.getMinutes()<10?"0":"") +currentTime.getMinutes();
+secs.innerHTML=(currentTime.getSeconds()<10?"0":"") +currentTime.getSeconds();
+hrs.innerHTML=(currentTime.getHours() <10?"0":"")+currentTime.getHours();
+},1000)
+    </script>
+</body>
+</html>

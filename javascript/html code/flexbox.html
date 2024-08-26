@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.box{
+    width: 100px;
+    height: 100px;
+background-color: blueviolet;
+color: white;
+/* flex: 1; */
+text-align: center;
+}
+.box:nth-child(1){
+    background-color: green;
+    /* flex-grow: 1; */
+    align-content: center;
+    /* justify-items: auto; */
+}
+.box:nth-child(2){
+    background-color: red;
+    /* flex-grow: 1; */
+    align-content: center;
+}
+.box:nth-child(3){
+    background-color:fuchsia;
+    /* flex-basis: 50%; */
+    /* flex-grow: 1; */
+    align-content: center;
+    
+}
+.box:nth-child(4){
+    background-color: yellow;
+    /* flex-grow: 1; */
+    align-content: center;
+}
+.box:nth-child(5){
+    background-color:darkolivegreen;
+    /* flex-grow: 1; */
+    align-content: center;
+}
+.box:nth-child(6){
+    background-color:maroon;
+    /* flex-grow: 1; */
+    align-content: center;
+}
+.container{
+    display: flex;
+    /* gap: 10px; */
+    /* background-color:blue ; */
+    border: 2px solid blue;
+    /* width: fit-content; */
+    /* display: inline-flex; */
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    /* align-items: center; */
+    height: 600px;
+    justify-content: start;
+    align-items: start;
+flex-wrap: wrap;
+}
+span{
+    background-color: aquamarine;
+}
+[meme]{
+    background-color: brown;
+    width: 40px;
+    height: 40px;
+}
+
+    </style>
+</head>
+<body>
+    <span>Fufu</span>
+    <span>Banana</span>
+    <span>Guava</span>
+    <span>Mango</span>
+    <span>Orange</span>
+    <span>Coconut</span>
+    
+   <div class="container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+   </div> 
+   <div meme></div>
+</body>
+</html>

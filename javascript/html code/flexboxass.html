@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{
+    /* padding: 0;
+    margin: 0;
+    box-sizing: border-box; */
+}
+.box{
+    width: 100px;
+    height: 70px;
+    background-color: antiquewhite;
+    /* display: grid; */
+            place-items: center;
+            font-size: 50px;
+            text-align: center;
+}
+.box:nth-child(1){
+    background-color: #FD7B47;
+    grid-row: 3/3;
+    grid-column: 1/4;
+    width: 200px;
+    height: 70px;
+}
+.box:nth-child(2){
+    background-color:#47FC93;
+}
+.box:nth-child(3){
+    backgroundcolor: #B7FC47;
+}
+.box:nth-child(4){
+    background-color:#46ABFD;
+    grid-row: span 2;
+}
+.box:nth-child(5){
+    background-color:#FD47CF;
+}
+.box:nth-child(6){
+    background-color:#47F1FE;
+}
+.box:nth-child(7){
+    background-color:#5A670B;
+}
+.box:nth-child(8){
+    background-color:#044557;
+}
+.box:nth-child(9){
+    background-color:#F30C1E;
+}
+body{            
+    /* background-color: blue; */
+            /* color: white; */
+            display: grid;
+            place-items: center;
+            font-size: 50px;}
+.wrapper{
+    display: grid;
+            background-color: wheat;
+            /* grid-template-columns: 60% calc(40% - 20px); */
+            grid-template-columns: repeat(5, 1fr);            
+            grid-template-rows: repeat(3, 1fr);
+            /* gap: 20px; */
+            /* width:100px; */
+            /* height: 500px; */
+}
+
+</style>
+
+
+
+
+
+
+
+
+</head>
+<body>
+    <div class="wrapper">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    </div>
+</body>
+</html>

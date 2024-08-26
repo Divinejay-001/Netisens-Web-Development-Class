@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Form Assignment</title>
+</head>
+<style>
+*{
+padding: 0;
+margin: 0%;
+box-sizing: border-box;
+}
+ body{
+background-color:#E0F1E7 ;
+height: auto;
+display: grid;
+place-items: center;
+}
+form{
+    padding: 20px;
+    background-color: #FFFFFF;
+            border-radius: 15px;
+            width: 90%
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;    
+}
+
+.flex{
+            display: flex;
+            gap: 15px;
+        }
+        .form-input{
+display:flex ;
+flex-direction: column;
+}
+.radio-input{
+    display: flex;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+            flex: 1;
+            display: flex;
+}
+textarea{
+    height: 100px;
+}
+button{
+    width:400px;
+    padding: 10px;
+    border: none;
+    background-color: #0C7D69;
+    color: #FFFFFF;
+    border-radius: 2rem;
+    padding: 0.7rem;
+}
+</style>
+<body>
+    <form action=""> 
+        <h2>Contact Us</h2>
+    <div class="flex">
+        <div class="form-input">
+            <label for="">First Name *</label> 
+
+<input type="text" placeholder="Enter Your First Name">
+        </div>
+<div class="form-input">
+<label for="">Last name*</label>
+<input type="text" placeholder="Enter Your Last Name">
+</div>
+    </div>
+<div class="form-input">
+<label for="">Email Address*</label>
+<input type="email" placeholder="Enter Email Address" >
+</div>
+<div class="radio-group">
+    <p>Query Type*</p>
+<div class="flex">
+    <div class="radio-input">
+<input type="radio" name="" >
+<label for="">General Enquiry</label>
+</div>
+<div class="radio-input">
+    <input type="radio" name="" >
+    <label for="">Support Request</label>
+    </div>
+</div>
+</div>
+    <div class="form-input">
+<label for="">Message*</label>
+<textarea name="" id="" placeholder=""></textarea>
+    </div>
+    <small>
+        <input type="checkbox" name=" id="">
+         I consent to being contacted by the team*
+    </small>
+    <button>Submit</button>
+    </form>
+</body>
+</html>
