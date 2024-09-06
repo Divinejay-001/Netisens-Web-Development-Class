@@ -56,3 +56,13 @@ function enter() {
 function clearDisplay(){
  divine.value='';
 }
+const music = document.getElementById('backgroundSound');
+
+// music.play('backgroundSound')
+
+// window.onload =function(){
+//   const music=document.getElementById('backgroundSound')
+//   music.play('backgroundSound');
+// }
+// // backgroundSound.pause()
+// backgroundSound.currentTime=0
