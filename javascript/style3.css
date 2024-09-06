@@ -24,7 +24,7 @@ button:hover{
     display: grid;
     grid-template-columns:repeat(4,1fr);
     gap: 10px;
-    padding: 25px;
+    padding: 20px;
 }
 #calculator{
     border-radius: 15px;
@@ -48,6 +48,7 @@ body{
     align-items: center;
     height: vh;
     background-color: antiquewhite;
+    /* width: 100%; */
 }
 .operator-btn{
     background-color: orange;

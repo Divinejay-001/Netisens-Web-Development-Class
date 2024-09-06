@@ -14,41 +14,71 @@ console.log('logged in successfully')
     console.log('invalid credentials')
 }
 // alert('I love eating bread')
-let score =prompt('Please enter your score')
-score.trim
-    console.log()
+let score =prompt('Please enter your score');
+console.log('score before trimming:'+ score)
+console.log('length before trimming:'+score.length);
 
-// let score;
-console.log(typeof 'Musa');
-console.log(typeof []);
-console.log(typeof {});
-console.log(typeof '55');
-if(score < 0 || score>100){
-    console.log('invalid score')
-}
-console.log('length check:' +score.length);
-console.log('Number check:'+ isNaN(score))
-if(score>=0 && score<=100 &&!isNaN(score) &&score.length && score.trim() !==''){
-if(score>=70){
-    console.log('You have an A')
+score = score.trim();
+console.log('score after trimming:'+ score);
+console.log('length after trimming:'+score.length);
+
+if(score.length>0 && !isNaN(score)){
+
+
+    score= Number(score);
+    console.log('score after converting to number:'+ score)
+if(score >=0 && score <=100){
+if(score>= 70){
+    console.log(`Congratulations you scored ${score} You have an A`)
 }else if(score>=60){
-    console.log('You have a B')
+    console.log('Congratulations you scored'+ score +', You  have a B')
 }else if(score>=50){
-    console.log('You have a C')
+    console.log('Congratulations you scored '+ score +', You have a C')
 }else if(score>=45){
-    console.log('You have a D')
-}else{
-    console.log('You have an F, come back next year dummy')
+    console.log('Congratulations you scored '+ score +',  You have a D')
+}else if(score<=44){
+    console.log('Congratulations scored '+ score +',  You have an F come back next year dummy')
+}else {
+console.log('Invalid score')
 }
-if(score!=0 || score!=100 ||isNaN(score)|| score.length<1){
-    console.log('Invalid input')
+// if(score>=0 && score)
+//     console.log(`Score: ${numericScore} - Grade: ${grade}`);
+
+// }
 }
-if(score>100){
-        console.log('Invalid score')
-    }if(score<0){
-        console.log('Invalid score')
-    }
 }
+// }
+// let score;
+// console.log(typeof 'Musa');
+// console.log(typeof []);
+// console.log(typeof {});
+// console.log(typeof '55');
+// if(score < 0 || score>100){
+//     console.log('invalid score')
+// }
+// console.log('length check:' +score.length);
+// console.log('Number check:'+ isNaN(score))
+// if(score>=0 && score<=100 &&!isNaN(score) &&score.length && score.trim() !==''){
+// if(score>=70){
+//     console.log('You have an A')
+// }else if(score>=60){
+//     console.log('You have a B')
+// }else if(score>=50){
+//     console.log('You have a C')
+// }else if(score>=45){
+//     console.log('You have a D')
+// }else{
+//     console.log('You have an F, come back next year dummy')
+// }
+// if(score!=0 || score!=100 ||isNaN(score)|| score.length<1){
+//     console.log('Invalid input')
+// }
+// if(score>100){
+//         console.log('Invalid score')
+//     }if(score<0){
+//         console.log('Invalid score')
+//     }
+// }
 
 // if(score>100){
 //     console.log('Invalid score')
@@ -59,6 +89,7 @@ if(score>100){
 //     console.log('invalid score')
 // }else if(score < 0){
 //     console.log('invalid score')
+
 // }
 // if(7<2){
 //     console.log('codition valid');
@@ -66,10 +97,10 @@ if(score>100){
 //     console.log('condition invalid');
 // }
 
-console.log({score});
+// console.log({score});
 
-console.log('length check:'+score.length)
-console.log(score.trim)
+// console.log('length check:'+score.length)
+// console.log(score.trim)
 // let bankBalance = 70000;
 
 // if(bankBalance > 80000){

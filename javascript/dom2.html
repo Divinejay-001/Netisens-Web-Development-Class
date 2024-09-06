@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bet App</title>
+    <style>
+  body {
+    margin: auto;
+    width: 700px;
+    height: 100vh;
+    background-color: grey;
+    display: grid;
+    justify-self: center;
+  }
+  body:hover {
+  }
+  div {
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 500px;
+    width: 1000px;
+    justify-self: center;
+    padding: 20px;
+  }
+  button {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+  button:hover{
+    background-color:gray;
+  }
+  button:active{
+    background-color:yellow;
+  }
+  .button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+    grid-gap: none;
+    margin-left: 50px;
+    justify-content: center;
+gap: none;
+max-width: 400px;
+     }
+  p {
+    color: aqua;
+    font-size: 15px;
+    justify-self: center;
+  }
+  #Enter{
+    width: 60px;
+    padding: 10px 20px 10px 20px ;
+    height: 50px;
+    font-size: 15px;
+   
+    align-items: center;
+justify-content: center;
+  }
+  input{
+    align-self: center;
+
+  }
+  #display{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 15px;
+    display:grid;
+  }
+  #computerDisplay{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 15px;
+    display: grid;
+  }
+</style>
+</head>
+<body>
+           <p onclick="alert('Pick a number and stand a chance winning')" id="tap-me">Just Tap Me</p>
+ <div class="button-grid">
+    
+     <input id="display"readonly>
+    <label for="">user</label>
+     
+    
+    <input id="computerDisplay"readonly></input>
+        <label for="">computer</label>
+        
+        <button onclick="appendToDisplay ('0')"> 0</button>
+
+        <button onclick="appendToDisplay ('1')"> 1</button>
+        <button onclick="appendToDisplay ('2')"> 2</button>
+        <button onclick="appendToDisplay ('3')"> 3</button>
+        <button onclick="appendToDisplay ('4')"> 4</button>
+        <button onclick="appendToDisplay ('5')">5</button>
+        <button onclick="appendToDisplay ('6')"> 6</button>
+        <button onclick="appendToDisplay ('7')">7</button>
+        <button onclick="appendToDisplay ('8')">8</button>
+        <button onclick="appendToDisplay ('9')">9</button>
+        <button onclick="enter('Enter')">Enter</button>
+      </div>
+  <script src="/javascript/dom2.js"></script>
+</body>
