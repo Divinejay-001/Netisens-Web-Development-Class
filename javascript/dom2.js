@@ -31,6 +31,7 @@
 //         display.value="Error"
 //     }
 // }
+const divine= document.getElementById('display') 
 let display = '';
 let computerDisplay = '';
 
@@ -46,8 +47,12 @@ function enter() {
   if (display == computerDisplay) {
     alert('You have won a prize!');
   } else {
+    alert('Game Over!!!!')
     alert('You have failed. Try again!');
   }
   
   display = ''; // reset user input
+}
+function clearDisplay(){
+ divine.value='';
 }
