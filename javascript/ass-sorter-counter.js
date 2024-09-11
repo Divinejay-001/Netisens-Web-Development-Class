@@ -1,6 +1,6 @@
 let randomNumbers = []
 for(let num =0; num<15; num++){
-randomNumbers.push(Math.floor(Math.random()*101))
+randomNumbers.push(Math.floor(Math.random()*109))
 }
 randomNumbers.sort((a,b)=>a-b)
 console.log(randomNumbers)
@@ -9,5 +9,6 @@ for(let num of randomNumbers){
     if(num>25){
         count++
     }
-}console.log(randomNumbers)
+}
+console.log(randomNumbers)
 console.log(count)

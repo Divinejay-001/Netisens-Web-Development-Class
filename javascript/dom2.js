@@ -32,11 +32,12 @@
 //     }
 // }
 const divine= document.getElementById('display') 
+const saviour= document.getElementById('computerDisplay') 
 let display = '';
 let computerDisplay = '';
 
 function appendToDisplay(num) {
-  display += num;
+  display = num;
   document.getElementById('display').value = display;
 }
 
@@ -44,17 +45,20 @@ function enter() {
   computerInput = Math.floor(Math.random() * 10); // generates a random number between 0 and 9
   document.getElementById('computerDisplay').value = computerInput;
   
-  if (display == computerDisplay) {
-    alert('You have won a prize!');
-  } else {
-    alert('Game Over!!!!')
-    alert('You have failed. Try again!');
+  if(!display){
+    alert('Enter A Number')
   }
-  
+  if (display === computerDisplay) {
+    alert('You have won a prize!');
+} else {
+    alert(' You have failed. Try again!');
+  }
+ }
   display = ''; // reset user input
-}
+
 function clearDisplay(){
  divine.value='';
+ saviour.value='';
 }
 const music = document.getElementById('backgroundSound');
 

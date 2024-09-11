@@ -1,17 +1,58 @@
 body{
-margin: 0;
-padding: 0;
-font-family: Arial ;
+    box-sizing: border-box;
+    padding: 0;
+    margin: none;
+    background-image: url('/pexels-han-chieh-lee-1234591373-27080017.jpg');
+    background-size: cover;
+   background-repeat: no-repeat;
+   max-height: 200vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+   transform: scale(1.5);
 }
-table,th,td{
-    width: 800px;
-    margin: auto;
-    font-size: 30px;
-    padding:20px;
-    text-align: center;
-    border: 2px solid#000;
-    border-collapse: collapse;
+.clockwatch{
+    /* border: 2px solid ; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    
 }
-table,tr{
-    background-color: blueviolet;
+   .divine{
+    cursor: pointer;
+    font-size: 80px;
+    color:blue;
+    background: linear-gradient(
+        45deg,
+        #FF0000, #FF7300, #FFFB00, #48FF00,
+        #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    animation:glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 1;
+    
+   }
+
+   #button{
+    font-size: 20px;
+    /* background-color: white; */
+    /* border: none; */
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-block: 14px;
+   }
+  .me{ 
+  }
+  .me:hover{
+    transform: scale(1.1);
+    background-color: #B0D9F4;
+  }
+  @keyframes glowing{
+    0%{background-position: 0 0;}
+    50%{background-position: 400% 0;}
+   100%{background-position: 0 0;}
 }

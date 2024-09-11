@@ -130,4 +130,3 @@ console.log(myHead)
 
     // const word = document.getElementById('heading')
     // word.innerText = `<p>Hidden text</p>
-    //         <p>Visible text</p>`

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style5.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> -->
+</head>
+<body>
+    <button id="playButton" class="btn">Play Music</button>
+    <audio id="Music" src="/Rema_-_Ozeba (1).mp3"></audio>
+    <!-- <i class="fa fa-address-book" aria-hidden="true"></i> -->
+    <script>
+        const playButton = document.getElementById('playButton');
+        const music = document.getElementById('Music');
+
+        playButton.addEventListener('click', () => {
+            if (music.paused) {
+                music.play();
+                playButton.textContent = 'Pause Music'; // Update button text
+            } else {
+                music.pause();
+                playButton.textContent = 'Play Music'; // Update button text
+            }
+        });
+    </script>
+</body>
+</html>

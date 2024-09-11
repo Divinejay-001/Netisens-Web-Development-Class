@@ -21,3 +21,4 @@ for(let num of randomNumbers){
 }
 console.log(oddNumbers)
 console.log(evenNumbers)
+

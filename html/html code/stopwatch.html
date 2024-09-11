@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="clockwatch">
+<div class="container">
+<div id="display" class="divine">
+00:00:00:00
+</div>
+</div>
+<div id="button">
+<button id="startBtn" onclick="start()"><i class="fa fa-play" aria-hidden="true"></i></button>
+    <button id="stopBtn" onclick="stop()"><i class="fa fa-pause" aria-hidden="true"></i></button>
+    <button id="refreshBtn" onclick="refresh()"><i class="fa fa-refresh" aria-hidden="true"></i>
+    </button>
+    </div>
+  </div>  
+</body>
+<script>
+    const divine = document.getElementById('display');
+    let timer= null;
+    let startTime = 0;
+    let elapsedTime = 0;
+    let isRunning = false;
+
+    function start(){
+       if(!isRunning){
+        startTime= Date.now() - elapsedTime;
+       timer = setInterval(update, 10);
+       isRunning = true;
+       } 
+    }
+    function stop(){
+if(isRunning){
+    clearInterval(timer);
+    elapsedTime = Date.now() - start
+    isRunning = false;
+   
+}
+    }
+    function reset(){
+if(isRunning){
+  
+}
+    }
+    function update(){
+const currentTime= Date.now();
+elapsedTime = currentTime - startTime;
+
+let hours = Math.floor(elapsedTime/(1000 * 60 *60));
+let minutes = Math.floor(elapsedTime/(1000 * 60) % 60);
+let seconds = Math.floor(elapsedTime / 1000 % 60)
+  let miliSeconds = Math.floor(elapsedTime %1000 /10) 
+hours = String(hours).padStart(2, "0")
+minutes = String(minutes).padStart(2, "0")
+seconds = String(seconds).padStart(2, "0")
+miliSeconds = String(miliSeconds).padStart(2, "0")
+
+  divine.textContent=`${hours}:${minutes}:${seconds}: ${miliSeconds}`;
+  }
+</script>
+</html>
