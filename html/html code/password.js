@@ -10,7 +10,7 @@ const symbolsElement = document.getElementById('symbols');
 const generateBtn = document.querySelector('.generate-btn');
 const copyBtn = document.querySelector('.password-output span');
 
-
+// const input = document.createElement('input');
 
 passwordLength.innerText = passwordLengthRange.value;
 
@@ -30,6 +30,21 @@ generateBtn.addEventListener('click', () => {
     passwordDisplay.value = password;
     calculatePasswordStrength(password, passWordLength);    
 });
+
+// const update = document.getElementById('password-display');
+//   const passwordStrengthDisplay = document.getElementById('strenght-indicator');
+
+//   passwordDisplay.addEventListener('input', (e) => {
+//     const modifiedPassword = e.target.value;
+//     const strength = calculatePasswordStrength(modifiedPassword);
+//     passwordStrengthDisplay.textContent = `Strength: ${strength}`;
+//   });
+
+//   function calculatePasswordStrength(password) {
+//     // Implement your password strength calculation algorithm here
+//     // Return a strength value (e.g., 0-100, weak-strong)
+//   }
+
 
 
 function generatePassword(passWordLength, includeUpperCase, includeNumbers, includeSymbols){
@@ -86,8 +101,8 @@ copyBtn.addEventListener('click', () => {
 })
 
 
-function calculatePasswordStrength(password, passWordLength){
-    let strength = 0;
+function calculatePasswordStrength(password, passWordLength, inputLength){
+      let strength = 0 ;
     const lowercaseCharacters = /[a-z]/g;
     const upperCaseCharacters = /[A-Z]/g;
     const numberCharacters = /[0-9]/g;
@@ -140,3 +155,8 @@ function calculatePasswordStrength(password, passWordLength){
     }
         
 }
+const manualPasswordChange = ()=>{ 
+alert('Manual Password')
+}
+passwordDisplay.addEventListener('change', manualPasswordChange)
+`   `

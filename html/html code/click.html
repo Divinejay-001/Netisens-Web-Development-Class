@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            align-items: center;
+            display: grid;
+        } */
+        #container{
+            width: 200px;
+            height:200px;
+            background-color: blue;
+            display: grid;
+            place-items: center;
+            /* align-self: center; */
+            margin: auto;
+            /* justify-content: center; */
+            /* align-items: center; */
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            border-radius: 7%;
+        }
+    </style>
+</head>
+<body>
+   <div id="container">0</div> 
+    <script>
+        function getRandomColor(){
+            const color = ['black', 'blue', 'green', 'yellow','red','violet','cyan']
+            return color[Math.floor(Math.random() * color.length)];
+        }
+// function getRandomColor() {
+//     const letters = "0123456789ABCDEF";
+//     let color = "#";
+//     for (let i = 0; i < 6; i++) {
+//       color += letters[Math.floor(Math.random() * 16)];
+//     }
+//     return color;
+// }
+          
+        const container = document.getElementById('container');
+        let count=0;
+        container.addEventListener("click", ()=>{
+            // let count= count + 1
+            count++;
+            // if(count=0, count>0, count++)
+            container.textContent = count;
+            console.log(count)
+            container.style.backgroundColor = getRandomColor();
+        })
+   
+        
+    </script>
+       
+</body>
+</html>

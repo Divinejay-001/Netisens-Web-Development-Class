@@ -23,7 +23,7 @@ body{
    .divine{
     cursor: pointer;
     font-size: 80px;
-    color:blue;
+    color:rgb(255, 0, 0);
     background: linear-gradient(
         45deg,
         #FF0000, #FF7300, #FFFB00, #48FF00,

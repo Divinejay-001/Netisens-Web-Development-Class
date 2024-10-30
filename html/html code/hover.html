@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style5.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> -->
 </head>
-<body>
+<body> 
     <button id="playButton" class="btn">Play Music</button>
     <audio id="Music" src="/Rema_-_Ozeba (1).mp3"></audio>
     <!-- <i class="fa fa-address-book" aria-hidden="true"></i> -->
@@ -15,15 +15,24 @@
         const playButton = document.getElementById('playButton');
         const music = document.getElementById('Music');
 
-        playButton.addEventListener('click', () => {
+        playButton.addEventListener('click', (e) => {
             if (music.paused) {
                 music.play();
                 playButton.textContent = 'Pause Music'; // Update button text
-            } else {
+            } 
+            else {
                 music.pause();
                 playButton.textContent = 'Play Music'; // Update button text
             }
         });
+        document.addEventListener('keydown', function(e){
+            if(e.keyCode == 32){
+                const music = getElementById('music');
+                music.play();
+            }else{
+                music.pause();
+            }
+        })
     </script>
 </body>
 </html>
